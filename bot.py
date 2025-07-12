@@ -1,7 +1,8 @@
+import os
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-TOKEN = "YOUR_BOT_TOKEN"
+TOKEN = os.getenv("BOT_TOKEN")
 
 def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('नमस्ते! मैं आपका बॉट हूँ')
